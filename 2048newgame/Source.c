@@ -66,17 +66,14 @@ int main()
         switch (input)
         {
         case PLAY: Game(), system("cls");
-            return 0;
             break;
-        case CONTINUE: GameSave(), system("cls");
-            return 1;
+        case CONTINUE:GameSave(), system("cls");
             break;
         case EXIT: printf("\nВыход из игры \n");
-            return 0;
             break;
         }
     } while (input);
-
+    return 0;
 }
 void menu()
 {
@@ -433,8 +430,6 @@ void GameSave()
     DISPLAY GameBoard = { 0 };
 
     srand((unsigned)time(NULL));
-
-    board(&GameBoard);
     PrintSave(&GameBoard);
     while (1)
     {
